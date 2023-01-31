@@ -1,0 +1,118 @@
+1)The below code firstly describes the common things of react:
+
+// import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+// it is a custom copmonent
+// compoent is a peice of code that renders some jsx
+
+const App=()=> {
+  const name="abhishek";
+  const istrue=false;
+  return (
+    <div className="App">
+   
+    <h1>hello abhishek,{name}</h1> 
+
+     {/* the above statement output will be (hello abhishek,abhishek) and it will be gonna dispayed on the upper middle position */}
+
+      <h1>hello {istrue?name:'someone'}</h1> 
+      
+    {/* the above illustrates the concept of the ternary operator in react  */}
+
+      <h1>Hello {2+2}!</h1>
+      
+       {/* make sure that adjacent jsx elements must be wrapped within the same react fragment you can see in the below demo
+       react fragment is a kind of empty div tag 
+       */}
+    
+    </div>
+  )
+}
+
+export default App;
+
+2)now we will study how to call one from an another copmonent
+one thing to note here bro that make sure that whener you name any function or react arrow component the first letter should be in capital letter always
+
+in the below we get an idea of the props that to use the conecpt of the props see the below code
+
+import React from 'react'
+import './App.css';
+
+// below is the custom component
+
+const Person = (props) => {
+  return (
+    <>
+     <h1>name:{props.name}</h1>
+     <h2>Last Name:{props.lastname}</h2>
+     <h1>age:{props.age}</h1> 
+    </>
+  )
+}
+
+// props allow to pass dynamic data through react components props are just the arguments that u will pass in the react coponent
+
+const App = () => {
+  return (
+    <div>
+      {/* u can use double or single quotes doe not matter */}
+      <Person name={'harsh'} lastname={'kumar'} age={90}/>
+      <Person/>  
+      <Person/>  
+      <Person/>  
+      <Person/>  
+      <Person/>
+    </div>
+  )
+}
+
+export default App
+
+3)
+
+import React from 'react'
+import './App.css'
+import {useState,useEffect} from 'react';
+// now we will study the conecpt of react state
+// state in react is a plane javascript object which is used to reprenet a peice of information about a component current situation it is completely managed by compknent istlelf
+
+const App = () => {
+//  we have to use the concept of array destructing in order to make to make button dynamic
+const [counter,setCounter]= useState(0);
+// call the second variavle same as first one but make sure add use in front of it because it is the setter function of that variable
+
+useEffect(()=>{
+  // alert("Reload");
+  // counter=100;
+  // the above ierror we breaking the rule of react neveer initilize the state manually
+  // counter can only be chjange using its own setter functiomn
+  alert("you have changed the value of counter"+counter);
+  // setCounter(100);  
+},[counter]);
+// set the empty dependency array as well in your useeffect function 
+
+
+// the bove usefeect hook code will pop up as soon as we reload our page
+
+// whwnever you call a function and it starts with use it is being called as the hook
+
+// here we will also learn nabout events
+// an event is an action can be triggered either by user or system generated events
+// we can not use state without using hooks
+
+  return (
+    <div className="App">
+      {/* <button onClick={()=>alert('clicked')}>-</button> */}
+        {/* as soon as you click the negative button it give alert named clicked */}
+        <button onClick={()=>setCounter((prevCount=>prevCount-1))}>-</button>
+      <h1>{counter}</h1>
+      <button onClick={()=>setCounter((prevCount=>prevCount+1))}>+</button>
+        </div>
+  )
+}
+
+export default App
+
+4)

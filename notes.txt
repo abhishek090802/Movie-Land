@@ -1,0 +1,70 @@
+Reactjs:it is a frontend javascript library
+it is being build by facebook and maintained ny open source community
+competitors:vue.js and angular.js are competitors of the react for single page web applications
+
+javascript mastery notes:
+https://drive.google.com/file/d/15K8wkmH6ygAwr1A2t3YGqoOE64t_Pnkd/view?usp=sharing
+
+it is used in the javascript stack(mern)
+
+we don't update dom directly as like in case of html we directlt update the dom as soon as we refresh the page but here we uses is a virtual dom it is a javascript object
+updating the virtual dom is much faster than real dom
+
+rEAct virtual dom only updates the specific that were necessary not the whole page
+
+javascript synthax that we used in the react is ES6 synthax
+
+react js is a component based javascript library
+
+every react application is tree of componenets
+
+component is a small part of user interface
+
+like sidebar,searchbar,navbar these are the various componenets in the react applications
+
+two types of componenets in react:
+a)functional componenets
+b)class based component
+
+class based copmponenets are not being used nowadays
+
+only functional coponents are important
+
+talking about functions as well there are three types of functions and those were:
+normal function,arrow function,named function
+
+mostly used function is arrow based function
+
+the code and tags are not html that was jsx(javascript synthax)  it comes with the full power of javascript that is responsible for the how actually our webpage will look like
+
+it forms the core of the react applications
+
+there are two ways for setting up of the react applications:
+1)manuallt setting up of all things using webpack and babel
+2)using the create-react-app command
+
+for beginners use the create-react-app command
+
+use the command npx-create-react-app ./ (for creating an react application in the current directory)
+
+for creating react application make sure that your pc has nodejs installed 
+nodejs is a javascript runtime that allows to execute js code on the server
+
+to run your react application on your browser:
+npm start
+
+all the logic will be in the source folder 
+
+in public folder we have only one file that is index.html
+
+all the react components are injected in the div id of root
+
+in index.js we have reactdom which is used to render div with id of root and we populate our application to that id root
+
+in app.js we have functional componennt and inside we can write jsx in it
+
+the one difference b/w jsx and html like we use className in place of class as that in html bcz class is revserved kework in javascript that's why we use className
+
+
+https://youtu.be/b9eMGE7QtTk
+
